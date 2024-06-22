@@ -11,9 +11,9 @@ public class Reverse_Vowel {
         int end = arr.length;
 
         while(start > end){
-            if(!vowels.contains(arr[start])) start++;
-            else if(!vowels.contains(arr[end])) end--;
-            else if(vowels.contains(arr[start]) && vowels.contains(arr[end])){
+            while( start < end && !vowels.contains(arr[start])) start++;
+            while (start < end && !vowels.contains(arr[end])) end--;
+            if(vowels.contains(arr[start]) && vowels.contains(arr[end])){
                 char temp = arr[start];
                 arr[start] = arr[end];
                 arr[end] = temp;
