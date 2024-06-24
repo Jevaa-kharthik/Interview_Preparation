@@ -22,6 +22,20 @@ class OuterClass{
     }
 }
 
+class Outside{
+    private int x = 10;
+
+    public int getx(){
+        return x;
+    }
+
+    class Inside{
+        public int InsideMethod(){
+            return x;
+        }
+    }
+}
+
 public class Inner_Class {
     
     public static void main(String[] args) {
@@ -34,5 +48,10 @@ public class Inner_Class {
         System.out.println("The Output changes to : ");
         System.out.println(out.getx());
         System.out.println(in.gety());
+
+        System.out.println("Accessing the outer class attribute from the inner class");
+        Outside off = new Outside();
+        Outside.Inside ins = off.new Inside();
+        System.out.println(ins.InsideMethod());
     }
 }
