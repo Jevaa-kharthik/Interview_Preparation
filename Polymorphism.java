@@ -20,6 +20,8 @@ public class Polymorphism {
     public static void main(String[] args) {
         pig pig_sound = new pig();
         pig_sound.sound();
+        dogs dog_sound = new dogs();
+        dog_sound.sound();
     }
     
 }
